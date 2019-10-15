@@ -1,0 +1,26 @@
+{
+  "name": "countries_lab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "vue": "^2.6.10",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/james-roberts-web/w7_d2_countries_lab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/james-roberts-web/w7_d2_countries_lab/issues"
+  },
+  "homepage": "https://github.com/james-roberts-web/w7_d2_countries_lab#readme"
+}
