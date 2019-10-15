@@ -9,9 +9,13 @@
   <body>
 
     <div id="app">
-      {{ header }}
+      <h1>{{ header }}</h1>
       <!-- ALL OF THE COUNTRIES START HERE: {{ countries }} -->
-      {{ totalPopulation }}
+      <h2>Total world population: {{ totalPopulation }}</h2>
+      <h3>Check the details of the country below</h3>
+      <select>
+        <option v-for="(country, index) in countries">{{country.name}}</option>
+      </select>
     </div>
 
   </body>
