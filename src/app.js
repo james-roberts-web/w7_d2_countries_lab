@@ -5,21 +5,26 @@ document.addEventListener('DOMContentLoaded', () => {
     el: '#app',
     data: {
       header: "Countries",
-      countries: [
-        {name: "", population: ""}
-      ]
+      countries: []
+
     },
+
     mounted(){
-      this.fetchPopulation();
+      this.fetchCountries();
     },
+
+    computed: {
+      totalPopulation: function() {
+        return(this.countries.reduce((sum, pop) => sum + pop.population, 0));
+      }
+    },
+
     methods: {
-      fetchPopulation: function () {
-        const request = fetch("https://restcountries.eu/rest/v2/all");
-        console.log(request)
-        // .then(response => response.json())
-        // .then(data => this.countries.name = data.message);
+      fetchCountries: function () {
+        const request = fetch("https://restcountries.eu/rest/v2/all")
+        .then(response => response.json())
+        .then(data => this.countries = data);
       }
     }
-
   })
 })
